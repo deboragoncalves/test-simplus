@@ -1,6 +1,6 @@
-<h2>Cadastrar</h2>
-<div>
-    <form (ngSubmit)="submit()" [hidden]="formHidden">
+<div [hidden]="formHidden" class="container-sm w-50 pt-3">
+    <h2 class="pt-3">Cadastrar</h2>
+    <form (ngSubmit)="submit()" class="pt-3">
         <div class="form-group">
             <label>Nome:</label>
             <input type="text" class="form-control" name="name" id="name" [(ngModel)]="player.name" required />
@@ -16,7 +16,7 @@
             <input type="text" class="form-control" name="position" id="position" [(ngModel)]="player.position" required />
         </div>
 
-        <button class="btn btn-success">Cadastrar</button>
+        <button class="btn btn-primary">Cadastrar</button>
     </form>
 </div>
 
