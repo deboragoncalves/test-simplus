@@ -1,1 +1,22 @@
-<p>players-list works!</p>
+<div class="container-sm w-75 pt-3">
+    <h2 class="pt-3 pb-3">Lista de jogadores</h2>
+    <table class="table table-hover mt-3 pt-3">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Posição</th>
+                <th>Altura</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let player in players | async">
+                <td>{{ player.name }}</td>
+                <td>{{ player.position }}</td>
+                <td>{{ player.height }}</td>
+                <td><button (click)="updatePlayer(player.id)" class="btn btn-lg p-0 m-0"><i class="far fa-edit"></i></button>
+                <button (click)="deletePlayer(player.id)" class="btn btn-lg p-0 ml-5"><i class="far fa-trash-alt"></i></button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

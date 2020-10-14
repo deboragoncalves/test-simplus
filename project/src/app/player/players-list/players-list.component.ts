@@ -1,4 +1,8 @@
+import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { ApiResponse } from 'src/app/model/api.response';
+import { PlayerService } from 'src/app/service/player.service';
 
 @Component({
   selector: 'app-players-list',
@@ -7,9 +11,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PlayersListComponent implements OnInit {
 
-  constructor() { }
+  // Resposta api
+
+  players: Observable<ApiResponse>;
+
+  constructor(private playerService: PlayerService, private route: Router) { }
 
   ngOnInit(): void {
+    // Get ao iniciar
+
+    this.playerService.getPlayers();
   }
 
 }
