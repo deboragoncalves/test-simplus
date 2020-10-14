@@ -6,6 +6,9 @@ import { AppComponent } from './app.component';
 import { CreatePlayerComponent } from './player/create-player/create-player.component';
 import { UpdatePlayerComponent } from './player/update-player/update-player.component';
 import { PlayersListComponent } from './player/players-list/players-list.component';
+import { PlayerService } from './service/player.service';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -16,9 +19,11 @@ import { PlayersListComponent } from './player/players-list/players-list.compone
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [PlayerService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
