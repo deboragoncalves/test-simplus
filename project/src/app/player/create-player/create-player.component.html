@@ -1,0 +1,23 @@
+<h2>Cadastrar</h2>
+<div>
+    <form (ngSubmit)="submit()" [hidden]="formHidden">
+        <div class="form-group">
+            <label>Nome:</label>
+            <input type="text" class="form-control" name="name" id="name" [(ngModel)]="player.name" required />
+        </div>
+
+        <div class="form-group">
+            <label>Idade:</label>
+            <input type="number" class="form-control" name="age" id="age" [(ngModel)]="player.age" required />
+        </div>
+
+        <div class="form-group">
+            <label>Posição</label>
+            <input type="text" class="form-control" name="position" id="position" [(ngModel)]="player.position" required />
+        </div>
+
+        <button class="btn btn-success">Cadastrar</button>
+    </form>
+</div>
+
+<!-- Cada input tem um model (ngModel. Objeto) que identifica o que está sendo digitado, para posteriormente exibir. -->
