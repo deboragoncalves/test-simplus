@@ -16,8 +16,9 @@
             <input type="text" class="form-control" name="position" id="position" [(ngModel)]="player.position" required />
         </div>
 
-        <button class="btn btn-outline-primary btn-md mt-3 p-2">Cadastrar</button>
+        <button class="btn btn-outline-primary btn-md mt-3 p-2" routerLink="/players">Cadastrar</button>
     </form>
+    <router-outlet></router-outlet>
 </div>
 
 <!-- Cada input tem um model (ngModel. Objeto) que identifica o que está sendo digitado, para posteriormente exibir. -->
