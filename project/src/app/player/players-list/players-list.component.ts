@@ -1,8 +1,7 @@
 import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
-import { ApiResponse } from 'src/app/model/api.response';
 import { PlayerService } from 'src/app/service/player.service';
+import { Player } from 'src/app/model/model.player';
 
 @Component({
   selector: 'app-players-list',
@@ -11,16 +10,20 @@ import { PlayerService } from 'src/app/service/player.service';
 })
 export class PlayersListComponent implements OnInit {
 
-  // Resposta api
+  // Atributo: receber resposta API
 
-  players: Observable<ApiResponse>;
+  players: Player[];
 
   constructor(private playerService: PlayerService, private route: Router) { }
 
   ngOnInit(): void {
+
     // Get ao iniciar
 
-    this.playerService.getPlayers();
+    this.playerService.getPlayers().subscribe((data: Player[]) => {
+      console.log(data);
+      this.players = data;
+    });
   }
 
 }

@@ -10,7 +10,7 @@
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let player in players | async">
+            <tr *ngFor="let player of players">
                 <td>{{ player.name }}</td>
                 <td>{{ player.position }}</td>
                 <td>{{ player.height }}</td>
