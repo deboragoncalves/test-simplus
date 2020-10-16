@@ -10,7 +10,7 @@ import { Player } from 'src/app/model/model.player';
 })
 export class PlayersListComponent implements OnInit {
 
-  // Atributo: receber resposta API
+  // Atributo: receber resposta API que será exibida na tabela
 
   players: Player[];
 
@@ -20,8 +20,15 @@ export class PlayersListComponent implements OnInit {
 
     // Get ao iniciar
 
-    this.playerService.getPlayers().subscribe((data: Player[]) => {
+    this.getPlayers();
+  }
+
+  getPlayers() {
+    this.playerService.getPlayers().subscribe(data => {
       console.log(data);
+
+      // Atribuir a resposta ao modelo/objeto estabelecido
+
       this.players = data;
     });
   }
