@@ -15,8 +15,6 @@ export class CreatePlayerComponent implements OnInit {
 
   player : Player = new Player();
 
-  formHidden = false;
-
   constructor(private playerService: PlayerService, private router:Router) { }
 
   ngOnInit(): void {
@@ -24,21 +22,21 @@ export class CreatePlayerComponent implements OnInit {
 
   submit() {
 
-    // Esconder formulário
-
-    this.formHidden = true;
-
     // Post
 
-    this.playerService.createPlayer(this.player).subscribe(data => console.log(data), error => console.log(error));
+    this.playerService.createPlayer(this.player).subscribe(data => {
+      
+      console.log(data)
+
+      // Ir para a lista
+
+      this.router.navigate(['/players']);
+    
+    }, error => console.log(error));
 
     // Limpar formulário
 
     this.player = new Player();
-
-    // Ir para a lista
-
-    this.router.navigate(['/players']);
   }
 
 }

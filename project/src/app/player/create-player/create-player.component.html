@@ -1,4 +1,4 @@
-<div [hidden]="formHidden" class="container-sm w-50 pt-3">
+<div class="container-sm w-50 pt-3">
     <h2 class="pt-3">Cadastrar</h2>
     <form (ngSubmit)="submit()" class="pt-3">
         <div class="form-group">
@@ -7,16 +7,16 @@
         </div>
 
         <div class="form-group">
-            <label>Idade:</label>
-            <input type="number" class="form-control" name="age" id="age" [(ngModel)]="player.age" required />
-        </div>
-
-        <div class="form-group">
             <label>Posição:</label>
             <input type="text" class="form-control" name="position" id="position" [(ngModel)]="player.position" required />
         </div>
 
-        <button class="btn btn-outline-primary btn-md mt-3 p-2" routerLink="/players">Cadastrar</button>
+        <div class="form-group">
+            <label>Altura:</label>
+            <input type="number" class="form-control" name="age" id="age" [(ngModel)]="player.height" required />
+        </div>
+
+        <button type="submit" class="btn btn-outline-primary btn-md mt-3 p-2">Cadastrar</button>
     </form>
     <router-outlet></router-outlet>
 </div>

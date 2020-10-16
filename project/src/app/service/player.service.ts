@@ -16,13 +16,13 @@ export class PlayerService {
   // Métodos get, post, etc. com base no endpoint e tendo como resposta a classe criada 
 
   // Observable: retorno da api (objeto Player)
-  
+
   getPlayers() : Observable<Player[]> {
     return this.http.get<Player[]>(this.baseUrl);
   }
 
-  createPlayer(player: Player) {
-    return this.http.post<ApiResponse>(this.baseUrl, player);
+  createPlayer(player: Player) : Observable<Object> {
+    return this.http.post(this.baseUrl, player);
   }
 
   updatePlayer(id: number, player: Player): Observable<ApiResponse> {
