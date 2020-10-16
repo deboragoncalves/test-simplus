@@ -1,9 +1,9 @@
-package com.projectsimplus.backend.repository;
+package com.simplus.projectBackend.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import com.projectsimplus.backend.model.Player;
+import com.simplus.projectBackend.model.Player;
 
 @Repository
 public interface PlayerRepository extends JpaRepository<Player, Long> {

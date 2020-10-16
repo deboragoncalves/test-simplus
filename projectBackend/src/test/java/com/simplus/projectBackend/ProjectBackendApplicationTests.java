@@ -1,10 +1,10 @@
-package com.projectsimplus.backend;
+package com.simplus.projectBackend;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class BackendApplicationTests {
+class ProjectBackendApplicationTests {
 
 	@Test
 	void contextLoads() {
