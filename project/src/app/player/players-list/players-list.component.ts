@@ -40,7 +40,9 @@ export class PlayersListComponent implements OnInit {
 
       console.log(data)
 
-      // Atualizar a páina
+      // Refresh
+
+      this.ngOnInit()
     
     }, error => console.log(error));
   }

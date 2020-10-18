@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { ApiResponse } from '../model/api.response';
 import { Observable } from "rxjs/index";
 import { Player } from '../model/model.player';
 
