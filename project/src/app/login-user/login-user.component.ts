@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
+import { ToastrService } from 'ngx-toastr';
+
 @Component({
   selector: 'app-login-user',
   templateUrl: './login-user.component.html',
@@ -8,7 +10,7 @@ import { Router } from '@angular/router';
 })
 export class LoginUserComponent implements OnInit {
 
-  constructor(private route: Router) { }
+  constructor(private route: Router, private toast: ToastrService) { }
 
   ngOnInit(): void {
 
@@ -30,10 +32,14 @@ export class LoginUserComponent implements OnInit {
         this.route.navigate(['players']);
 
       } else {
-        alert("A senha deve ter, no minimo, 6 dígitos.")
+        this.toast.warning('A senha deve ter, no minimo, 6 dígitos', 'Senha', {
+          timeOut: 5000,
+        });
       }
     } else {
-      alert("Preencha o email corretamente.")
+      this.toast.warning('O email deve estar nesse formato: exemplo@exemplo.com', 'Email', {
+        timeOut: 5000,
+      });
     }
       
     }
