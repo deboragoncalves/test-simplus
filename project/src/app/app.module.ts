@@ -10,6 +10,7 @@ import { PlayerService } from './service/player.service';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { LoginUserComponent } from './login-user/login-user.component';
+import { RegisterUserComponent } from './register-user/register-user.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { LoginUserComponent } from './login-user/login-user.component';
     CreatePlayerComponent,
     UpdatePlayerComponent,
     PlayersListComponent,
-    LoginUserComponent
+    LoginUserComponent,
+    RegisterUserComponent
   ],
   imports: [
     BrowserModule,

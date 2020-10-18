@@ -1,4 +1,4 @@
-<div class="container-sm w-50 pt-3">
+<div class="container-sm w-25 pt-3">
     <h2 class="pt-3">Login</h2>
     <form (ngSubmit)="submit(email.value, password.value)" class="pt-3">
         <div class="form-group">
@@ -11,9 +11,12 @@
             <input type="password" class="form-control" name="password" id="password" placeholder="Senha" #password required />
         </div>
 
-        <button type="submit" class="btn btn-outline-primary btn-md mt-3 p-2">Entrar</button>
+        <button type="submit" class="btn btn-outline-primary btn-md mt-3 p-1 button-login-width">Entrar</button>
     </form>
+    <router-outlet></router-outlet>
+</div>
+<div class="container register-user">
     <label>Não possui registro?</label>
-    <button class="btn btn-outline-primary btn-sm mt-3 p-2">Faça o cadastro</button>
+    <button routerLink="/register-user" class="btn btn-outline-primary mt-2 p-1 button-register-width">Cadastre-se</button>
     <router-outlet></router-outlet>
 </div>

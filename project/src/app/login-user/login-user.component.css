@@ -1,0 +1,31 @@
+.register-user {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    width: 15%;
+}
+
+.button-register-width {
+    width: 60%;
+}
+
+.button-login-width {
+    width: 22%;
+}
+
+@media (max-width: 1000px) {
+    .register-user {
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column;
+        width: 25%;
+    }
+
+    .button-register-width {
+        min-width: 100%;
+    }
+
+    .button-login-width {
+        min-width: 100%;
+    }
+}
