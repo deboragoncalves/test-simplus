@@ -34,7 +34,7 @@ export class CreatePlayerComponent implements OnInit {
     
     }, error => console.log(error));
 
-    // Limpar formulário
+    // Limpar 
 
     this.player = new Player();
   }
