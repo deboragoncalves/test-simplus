@@ -26,15 +26,25 @@ export class PlayersListComponent implements OnInit {
 
   getPlayers() {
     this.playerService.getPlayers().subscribe(data => {
+
       console.log(data);
 
-      // Atribuir a resposta ao modelo/objeto estabelecido
-
       this.players = data;
+
     });
   }
 
-  // Deletar passando o id
+  // Update
+
+  updatePlayer(id: number) {
+
+      // Ir para página de atualização e passar o id do objeto como parâmetro para ser preenchido
+
+      this.route.navigate(['update', id]);
+
+  }
+
+  // Deletar 
 
   deletePlayer(id: number) {
     this.playerService.deletePlayer(id).subscribe(data => {

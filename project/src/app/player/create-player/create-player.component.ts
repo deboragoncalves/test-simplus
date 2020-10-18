@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { PlayerService } from 'src/app/service/player.service'
 import { Player } from 'src/app/model/model.player'
 
@@ -15,24 +15,23 @@ export class CreatePlayerComponent implements OnInit {
 
   player : Player = new Player();
 
-  constructor(private playerService: PlayerService, private router:Router) { }
+  constructor(private playerService: PlayerService, private router: Router) { }
 
   ngOnInit(): void {
+
   }
 
   submit() {
 
-    // Post
+      // Post
 
-    this.playerService.createPlayer(this.player).subscribe(data => {
-      
-      console.log(data)
+      this.playerService.createPlayer(this.player).subscribe(data => {
 
       // Ir para lista
 
       this.router.navigateByUrl('/players');
-    
-    }, error => console.log(error));
+
+      }, error => console.log(error));
 
     // Limpar 
 

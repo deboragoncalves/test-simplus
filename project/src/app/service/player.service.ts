@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from "rxjs/index";
 import { Player } from '../model/model.player';
 
 @Injectable({
@@ -16,15 +15,23 @@ export class PlayerService {
 
   // Observable: retorno da api (objeto Player)
 
-  getPlayers() : Observable<Player[]> {
+  getPlayers() {
     return this.http.get<Player[]>(this.baseUrl + "players");
   }
 
-  createPlayer(player: Player) : Observable<Object> {
+  getPlayerById(id: number) {
+    return this.http.get<Player>(this.baseUrl + "players/" + id);
+  }
+
+  createPlayer(player: Player) {
     return this.http.post(this.baseUrl + "register", player);
   }
 
-  deletePlayer(id: number): Observable<any> {
+  updatePlayer(id: number, player: Player) {
+    return this.http.put(this.baseUrl + "update/" + id, player);
+  }
+
+  deletePlayer(id: number) {
     return this.http.delete(this.baseUrl + "/delete/" + id);
   }
 }
