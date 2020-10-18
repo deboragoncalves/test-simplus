@@ -8,6 +8,7 @@ import { Player } from 'src/app/model/model.player';
   templateUrl: './players-list.component.html',
   styleUrls: ['./players-list.component.css']
 })
+
 export class PlayersListComponent implements OnInit {
 
   // Atributo: receber resposta API que será exibida na tabela
@@ -33,7 +34,6 @@ export class PlayersListComponent implements OnInit {
     });
   }
 
-<<<<<<< HEAD
   // Deletar passando o id
 
   deletePlayer(id: number) {
@@ -47,7 +47,4 @@ export class PlayersListComponent implements OnInit {
     
     }, error => console.log(error));
   }
-
-=======
->>>>>>> 560f2059b1ea62fcd650eb8d406ba94700e26735
 }

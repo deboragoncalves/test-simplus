@@ -1,9 +1,5 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-<<<<<<< HEAD
-=======
-import { ApiResponse } from '../model/api.response';
->>>>>>> 560f2059b1ea62fcd650eb8d406ba94700e26735
 import { Observable } from "rxjs/index";
 import { Player } from '../model/model.player';
 
@@ -28,20 +24,7 @@ export class PlayerService {
     return this.http.post(this.baseUrl, player);
   }
 
-<<<<<<< HEAD
-  /* updatePlayer(id: number, player: Player): Observable<ApiResponse> {
-    return this.http.put<ApiResponse>(this.baseUrl + player.id, player);
-  } */
-
   deletePlayer(id: number): Observable<any> {
     return this.http.delete(this.baseUrl + "/" + id);
-=======
-  updatePlayer(id: number, player: Player): Observable<ApiResponse> {
-    return this.http.put<ApiResponse>(this.baseUrl + player.id, player);
-  }
-
-  deletePlayer(id: number): Observable<ApiResponse> {
-    return this.http.delete<ApiResponse>(this.baseUrl + id);
->>>>>>> 560f2059b1ea62fcd650eb8d406ba94700e26735
   }
 }

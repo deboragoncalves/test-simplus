@@ -11,7 +11,7 @@ import { Player } from 'src/app/model/model.player'
 
 export class CreatePlayerComponent implements OnInit {
 
-  // Inicializar classe Player; mostrar form
+  // Inicializar classe Player
 
   player : Player = new Player();
 
@@ -28,9 +28,9 @@ export class CreatePlayerComponent implements OnInit {
       
       console.log(data)
 
-      // Ir para a lista
+      // Ir para lista
 
-      this.router.navigate(['/players']);
+      this.router.navigateByUrl('/players');
     
     }, error => console.log(error));
 
