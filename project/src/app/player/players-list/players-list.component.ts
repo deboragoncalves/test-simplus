@@ -33,6 +33,7 @@ export class PlayersListComponent implements OnInit {
     });
   }
 
+<<<<<<< HEAD
   // Deletar passando o id
 
   deletePlayer(id: number) {
@@ -47,4 +48,6 @@ export class PlayersListComponent implements OnInit {
     }, error => console.log(error));
   }
 
+=======
+>>>>>>> 560f2059b1ea62fcd650eb8d406ba94700e26735
 }
