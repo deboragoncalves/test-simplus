@@ -9,13 +9,15 @@ import { PlayersListComponent } from './player/players-list/players-list.compone
 import { PlayerService } from './service/player.service';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { LoginUserComponent } from './login-user/login-user.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CreatePlayerComponent,
     UpdatePlayerComponent,
-    PlayersListComponent
+    PlayersListComponent,
+    LoginUserComponent
   ],
   imports: [
     BrowserModule,

@@ -13,8 +13,6 @@ export class PlayerService {
  
   // Métodos get, post, etc. com base no endpoint e tendo como resposta a classe criada 
 
-  // Observable: retorno da api (objeto Player)
-
   getPlayers() {
     return this.http.get<Player[]>(this.baseUrl + "players");
   }
