@@ -10,9 +10,10 @@ import { ToastrService } from 'ngx-toastr';
 export class AuthGuard implements CanActivate {
     constructor(private toast: ToastrService, private route: Router) {};
 
-    // Método que retorna true se usuário tiver logado e impede o acesso à página
+    // Método que retorna true se usuário tiver logado e impede o acesso à página caso não esteja
 
     canActivate() {
+
         if (localStorage.getItem('username')) {
             return true;
         } else {

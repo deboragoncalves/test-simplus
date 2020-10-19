@@ -3,6 +3,8 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Player } from 'src/app/model/model.player';
 import { PlayerService } from 'src/app/service/player.service';
 
+import { ToastrService } from 'ngx-toastr';
+
 @Component({
   selector: 'app-update-player',
   templateUrl: './update-player.component.html',
@@ -15,7 +17,7 @@ export class UpdatePlayerComponent implements OnInit {
   id: number;
 
   constructor(private playerService: PlayerService, private route: ActivatedRoute,
-    private router: Router) { }
+    private router: Router, private toast: ToastrService) { }
 
   ngOnInit(): void {
 
@@ -33,13 +35,32 @@ export class UpdatePlayerComponent implements OnInit {
   }
 
   submit() {
-    this.playerService.updatePlayer(this.id, this.player).subscribe(data => {
-      
-      // Ir para lista
 
-      this.router.navigateByUrl('/players');
+    if (this.player.name) {
+
+      if (this.player.position) {
+        if (this.player.height) {
+          this.playerService.updatePlayer(this.id, this.player).subscribe(data => {
+
+            this.router.navigateByUrl('/players');
       
-    }, error => console.log(error));
+          }, error => console.log(error));
+        } else {
+          this.toast.warning('O campo Altura está vazio.', 'Altura', {
+            timeOut: 5000
+          });
+        }
+      } else {
+        this.toast.warning('O campo Posição está vazio.', 'Posição', {
+          timeOut: 5000
+        });
+      }
+    } else {
+      this.toast.warning('O campo Nome está vazio.', 'Nome', {
+        timeOut: 5000
+      })
+    }
+    
   }
 
 }
