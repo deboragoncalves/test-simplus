@@ -22,11 +22,11 @@
 
 ##### ng serve
 
-#### 1.1 Open the application with the address: http://localhost:4200/
+#### 1.1 Open the application in the browser with the address: http://localhost:4200/
 
 #### 2. Backend:
 
 ##### cd projectBackend
 
-##### 2.2 Run the application as Spring Boot
+##### 2.2 Run the application as Spring Boot and open the data (JSON) with the address: http://localhost:8080/api/v1/players
 
