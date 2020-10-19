@@ -4,11 +4,11 @@
 
 ### Requisits
 
-#### NPM / Node
+#### Node
 
 #### Angular
 
-#### Spring Boot/Java
+#### Java (plugin Spring Boot)
 
 #### IDE for Backend: Eclipse or NetBeans
 
