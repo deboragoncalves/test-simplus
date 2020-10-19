@@ -8,7 +8,7 @@
 
 #### Angular
 
-#### Spring Boot
+#### Spring Boot/Java
 
 #### IDE for Backend: Eclipse or NetBeans
 
