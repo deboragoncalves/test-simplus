@@ -29,6 +29,8 @@ export class RegisterUserComponent implements OnInit {
         if (password.length > 7) {
   
           localStorage.setItem('username', username)
+
+          console.log(localStorage.getItem('username'))
   
           this.route.navigate(['players']);
   

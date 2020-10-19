@@ -18,10 +18,10 @@ export class PlayersListComponent implements OnInit {
   constructor(private playerService: PlayerService, private route: Router) { }
 
   ngOnInit(): void {
+      // Get ao iniciar
 
-    // Get ao iniciar
-
-    this.getPlayers();
+      this.getPlayers();
+  
   }
 
   getPlayers() {

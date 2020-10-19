@@ -18,7 +18,7 @@ export class CreatePlayerComponent implements OnInit {
   constructor(private playerService: PlayerService, private router: Router) { }
 
   ngOnInit(): void {
-
+   
   }
 
   submit() {

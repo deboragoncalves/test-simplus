@@ -19,17 +19,17 @@ export class UpdatePlayerComponent implements OnInit {
 
   ngOnInit(): void {
 
-    // Pegar o id que foi passado pelo router 
+      // Pegar o id que foi passado pelo router 
 
-    this.id = this.route.snapshot.params['id'];
+      this.id = this.route.snapshot.params['id'];
 
-    // Get player pelo id
+      // Get player pelo id
 
-    this.playerService.getPlayerById(this.id).subscribe(data => {
+      this.playerService.getPlayerById(this.id).subscribe(data => {
 
       this.player = data;
 
-    }, error => console.log(error));
+      }, error => console.log(error));
   }
 
   submit() {
