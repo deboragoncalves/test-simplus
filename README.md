@@ -1,4 +1,4 @@
-# Test Simplus
+# Volleyball Players - CRUD
 
 ## It's a full stack application, as a test for Developer in Simplus company. I did a CRUD in a players register system. On front-end was used Angular 10 and Bootstrap; Spring Boot was the tech used in Backend.
 
